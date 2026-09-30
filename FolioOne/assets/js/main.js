@@ -234,6 +234,8 @@
       const detailsLink = event.target.closest('.portfolio-details-link');
       if (!detailsLink) return;
 
+      if (detailsLink.getAttribute('href') !== '#') return;
+
       event.preventDefault();
       const card = detailsLink.closest('.portfolio-card');
       const image = card.querySelector('img');
